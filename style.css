@@ -23,4 +23,5 @@ h1,h2{
     .blue { color: blue; }
     div{
         font-family: 'Courier New', Courier, monospace;
+        margin-bottom: 20px;
     }

@@ -63,34 +63,32 @@ out.innerHTML = outStr;
 // 0 1 2. .100(после 100 тоже есть пробел)
 // задание сделать с помощью while
 
-/*
+
 let out1 = document.querySelector('.out1');
-let weturn = func_1();
+//let weturn = func_1();
 function func_1() {
     let k = 0;
-    while (k <= 30) {
-        out1.innerHTML += k;
-        console.log("suw " + k);
+    while (k <= 29) {
+        //out1.innerHTML += k;
+        //console.log("suw " + k);
         k++;
-        out1.innerHTML += '  ';
+        //out1.innerHTML += '  ';
         //console.log("suwd " + k);
-        //return func_1();
+
     }
+    //console.log("s" + k);
+    //return func_1();
 }
-out1.innerHTML += weturn;
-*/
+func_1();
+console.log("Result = " + func_1());
+//out1.innerHTML += func_1();
+
 
 // Task 2
 // Создайте функцию func_2, которая принимает от пользователя 2 параметра числа и возращает строку от первого числа до второго с шагом 1. Разделитель пробел.
 // Пример: пользователь ввел 5 и 7
 // 5 6 7
 // считаем что второе число всегда больше первого. Решаем с помощью while
-
-
-//
-//
-///
-
 
 /*
 let but1 = document.querySelector('.but1');
@@ -123,6 +121,7 @@ function func_2(a, b) {
 //out2.innerHTML += chet;
 */
 ////////////////////////////////////////////////////////
+//#2
 
 let a;
 let b;
@@ -131,26 +130,143 @@ let inputIn1 = document.querySelector('.in1');
 let inputIn2 = document.querySelector('.in2');
 let but1 = document.querySelector('.but1');
 let out2 = document.querySelector('.out2');
-//let but3 = document.querySelector('.but3');
-//let but2 = document.querySelector('.but2');
-///
-let summ;
-document.querySelector('.but1').onclick = function () {
-    console.log(inputIn1.value);
-    console.log(inputIn2.value);
 
-    inP1 = inputIn1.value;
-    inP2 = inputIn2.value;
-    let summ = inP1 * inP2;
+let qeturn = func_2();
+function func_2() {
+    document.querySelector('.but1').onclick = function () {
+        console.log(inputIn1.value);
+        console.log(inputIn2.value);
+        inP1 = inputIn1.value;
+        inP2 = inputIn2.value;
+        if (inP1 < inP2) {
+            let first = inP1;
+            let sec = inP2;
+            while (first <= sec) {
+                out2.innerHTML += first;
+                //console.log(first);
+                first++;
+                out2.innerHTML += '  ';
+            }
+        } else {
+            alert("ВВодите числа првильно!");
+        }
+    }
 
-    console.log(summ);
+}
+//out2.innerHTML += '  ';
+//out2.innerHTML += qeturn;
+/////
+//#3
+
+let inputIn3 = document.querySelector('.in3');
+let inputIn4 = document.querySelector('.in4');
+let but3 = document.querySelector('.but3');
+let out3 = document.querySelector('.out3');
+
+document.querySelector('.but3').onclick = function () {
+
+    inP3 = inputIn3.value;
+    inP4 = inputIn4.value;
+    if (inP3 > inP4) {
+        let first = inP3;
+        let sec = inP4;
+        while (first >= sec) {
+            out3.innerHTML += first;
+            //console.log(first);
+            first--;
+            out3.innerHTML += '  ';
+        }
+
+    } else {
+        alert("ВВодите числа првильно!");
+    }
+}
+
+//#4
+let inputIn5 = document.querySelector('.in5');
+let inputIn6 = document.querySelector('.in6');
+let inputIn7 = document.querySelector('.in7');
+let but2 = document.querySelector('.but2');
+let out4 = document.querySelector('.out4');
+
+document.querySelector('.but2').onclick = () => {
+    inP5 = inputIn5.value;
+    inP6 = inputIn6.value;
+    inP7 = inputIn7.value;
+    if (inP5 > inP6) {
+        let first = inP5;
+        let sec = inP6;
+        let step = inP7;
+        console.log(first);
+        console.log(sec);
+        console.log(step);
+        while (first > sec) {
+            //stg = first - step;
+            first = first - step;
+            out4.innerHTML += first;
+            console.log(first);
+            out4.innerHTML += '  ';
+        }
+    } else {
+        alert("Вводите числа правильно!");
+    }
+}
+
+//#5
+let inputIn8 = document.querySelector('.in8');
+let inputIn9 = document.querySelector('.in9');
+let but4 = document.querySelector('.but4');
+let out5 = document.querySelector('.out5');
+
+document.querySelector('.but4').onclick = () => {
+    inP8 = +inputIn8.value;
+    inP9 = +inputIn9.value;
+    let first = inP8;
+    let sec = inP9;
+    if (first <= 20 || sec >= 0) {
+        console.log(first);
+        summ = first + sec;
+        out5.innerHTML += summ;
+        console.log(summ);
+        out5.innerHTML += '  ';
+    } else {
+        alert("Вводите числа правильно!");
+    }
+}
+
+//#6
+let inputIn10 = document.querySelector('.in10');
+let inputIn11 = document.querySelector('.in11');
+let but5 = document.querySelector('.but5');
+let out6 = document.querySelector('.out6');
+
+document.querySelector('.but5').onclick = () => {
+    inP10 = +inputIn10.value;
+    inP11 = +inputIn11.value;
+    let first = inP10;
+    let sec = inP11;
+
+    //console.log(first);
+    //console.log(sec);
+
+    let i = 0;
+    let summ = 0;
+    //if (first < sec) {
+    while (i < sec) {
+        //let summ = first;
+        //summ = summ + i;
+        i++;
+        summ += i;
+
+
+        console.log(summ);
+    } out6.innerHTML = summ;
+    /* } else {
+         alert("False");
+     }*/
 
 }
 
-console.log(summ);
-
-
-/////
 /*
 aBut2 = document.querySelector('.but2');
 aBut2.onclick = function () {
@@ -161,7 +277,7 @@ aBut2.onclick = function () {
 }
 //////////////////////
 console.log(b);
-
+ 
 //et f1 = document.querySelector('.but1');
 //let but1 = 1;
 let int1 = 0;
@@ -176,7 +292,7 @@ console.log(int1);
 function one() {
     // x1 = document.querySelector('.in1').value;
     //console.log(x1);
-
+ 
     x1 = x1 + 1;
     console.log(x1);
     return x1;
@@ -200,21 +316,7 @@ div.addEventListener('mouseover', () => {
 function calc() {
     return x = x + 1;
 }
-
-
-
-/*
-function func_2(a, b) {
-    console.log(a.value);
-    console.log(b.value);
-
-}
-document.querySelector('.but3').onclick = function () {
-    document.querySelector('#out2').textContent = func_2();
-}
-
-*/
-
+////////////////////////////////////////////////////////////////
 
 
 // Task 3
